@@ -1,0 +1,148 @@
+@import "menu";
+
+.blogContainer {
+  padding: 20px 30px;
+  font-family: "Old Standard TT";
+  .titleBack {
+    background-color: $introBackground;
+    padding: 60px 60px 0 60px;
+    .titleFront {
+      @include colors($artBackgroundLight, #444);
+      padding: 30px;
+      font-size: 30px;
+      margin-right: 230px;
+    }
+  }
+  .contentBack {
+    background-color: lightgrey;
+    padding: 0 60px 0 60px;
+    .contentFront {
+      @include colors($artBackgroundLight, #444);
+      margin-right: 230px;
+      padding-bottom: 50px;
+      article {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .contenido {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 30px;
+          margin: 0 30px;
+          flex: 1;
+          @include respond-to(892px) {
+            flex-direction: column;
+            align-items: center;
+          }
+          .texto {
+            padding: 10px 0 0 20px;
+            text-align: justify;
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+            font-family: "Times New Roman", Times, serif;
+            flex: 1;
+          }
+          img {
+            width: auto;
+            height: 230px;
+            min-width: 100px;
+            border: 3px solid white;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  aside {
+    float: right;
+    padding: 20px 20px;
+    max-width: 200px;
+    @include colors($artBackgroundLight, #444);
+    margin: 60px 30px 60px 30px;
+    font-size: 18px;
+    .anyo {
+      padding-bottom: 10px;
+    }
+    .mes {
+      font-variant: small-caps;
+      padding-top: 10px;
+      .asideTitulo {
+        font-variant: none;
+        list-style-type: none;
+        padding: 10px 0 0 7px;
+        a {
+          text-decoration: none;
+          color: #444;
+          &:hover {
+            border-bottom: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
+
+article {
+  .tituloBlog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    .titulo {
+      font-size: 22px;
+      padding-top: 25px;
+      a {
+        text-decoration: none;
+        color: #444;
+      }
+    }
+  }
+  .decor {
+    background-image: url(/img/decor/linea2.png);
+    height: 30px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.oldCam img {
+  position: absolute;
+  bottom: 28px;
+  right: 2px;
+  height: 368px;
+}
+
+.blogContainer {
+  @include respond-to(892px) {
+    aside {
+      display: none;
+    }
+    .titleBack {
+      .titleFront {
+        margin-right: 0;
+      }
+    }
+    .contentBack {
+      .contentFront {
+        margin-right: 0;
+      }
+    }
+    .oldCamera {
+      display: none;
+    }
+  }
+}
+
+@import "footer";
+
+footer {
+  position: relative;
+  @include respond-to(892px) {
+    .oldCam {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "mixin";
+
+$menuBackground: #f08058;
+
+footer {
+  @include colors($menuBackground);
+
+  .footerCampos {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    align-items: center;
+    font-family: "Old Standard TT";
+
+    .autor {
+      padding-left: 20px;
+    }
+    .redes {
+      > i {
+        padding-right: 40px;
+        cursor: pointer;
+      }
+    }
+    a {
+      padding-right: 20px;
+      text-decoration: none;
+      color: #222;
+    }
+  }
+}

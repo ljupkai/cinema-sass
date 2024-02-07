@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/peliculas.css" />
+    <title>RetroCine</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="portada.html">
+          <div id="rotatingFilm">
+            <img
+              src="img/roll1.png"
+              height="30"
+              width="30"
+              id="rotatingRoll1"
+              alt=""
+            />
+            <img
+              src="img/roll1.png"
+              height="20"
+              width="20"
+              id="rotatingRoll2"
+              alt=""
+            />
+          </div>
+          <img
+            src="img/camera1.png"
+            id="cameraStatic"
+            width="60"
+            height="22"
+            alt=""
+          />
+          <div id="logoname">RetroCine</div></a
+        >
+      </div>
+      <!-- Hamburger icon -->
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <div class="menu">
+        <div id="dropdown" class="menuItem">
+          Películas
+          <div class="submenu">
+            <a href="#">Esta semana</a>
+            <a href="#">Proximaménte</a>
+          </div>
+        </div>
+        <a href="blog.html" class="menuItem">Blog</a>
+        <a href="entradas.html" class="menuItem">Entradas</a>
+        <a href="contact.html" class="menuItem">Contacto</a>
+      </div>
+      <div id="searchBar">
+        <input type="text" placeholder="Buscar.." />
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="titulo">
+          <span class="symbol">r</span> esta semana en la cartelera
+          <span class="symbol">r</span>
+        </div>
+        <div class="posters">
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-1"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">Forbidden Planet (1956)</div>
+                <div class="cardContent">
+                  <p>Aventura, Ciencia ficción</p>
+                  <p>
+                    Dirección: <br />
+                    M. Wilcox
+                  </p>
+                  <p>
+                    Reparto principal: <br />Walter Pidgeon, Anne Francis,
+                    Leslie Nielsen
+                  </p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0049223/">imdb </a
+                    >(7,5)<br />
+                    <a href="https://www.rottentomatoes.com/m/forbidden_planet"
+                      >rotten tomatoes </a
+                    >(9,5)
+                  </p>
+                  <p>10 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-2"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">Gilda (1946)</div>
+                <div class="cardContent">
+                  <p>Drama, Romance</p>
+                  <p>
+                    Dirección: <br />
+                    Charles Vidor
+                  </p>
+                  <p>Reparto principal: <br />Rita Hayworth, Glenn Ford</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0038559/">imdb </a
+                    >(7,6)<br />
+                    <a href="https://www.rottentomatoes.com/m/gilda"
+                      >rotten tomatoes </a
+                    >(9)
+                  </p>
+                  <p>12 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-3"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">The Shining (1980)</div>
+                <div class="cardContent">
+                  <p>Drama, Terror</p>
+                  <p>
+                    Dirección: <br />
+                    Stanley Kubrick
+                  </p>
+                  <p>Reparto principal: <br />Jack Nicholson, Shelley Duvall</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0081505/">imdb </a
+                    >(8,4)<br />
+                    <a href="https://www.rottentomatoes.com/m/shining"
+                      >rotten tomatoes </a
+                    >(8,2)
+                  </p>
+                  <p>2 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-4"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">The Brain Eaters (1958)</div>
+                <div class="cardContent">
+                  <p>Terror, Ciencia ficción</p>
+                  <p>
+                    Dirección: <br />
+                    Bruno Vesota
+                  </p>
+                  <p>Reparto principal: <br />Ed Nelson, Alan Jay Factor</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0051432/">imdb </a
+                    >(4,3)<br />
+                  </p>
+                  <p>4 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-5"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">Modern Times (1936)</div>
+                <div class="cardContent">
+                  <p>Comedia, Drama</p>
+                  <p>
+                    Dirección: <br />
+                    Charles Chaplin
+                  </p>
+                  <p>
+                    Reparto principal: <br />Charles Chaplin, Paulette Goddard
+                  </p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0027977/">imdb </a
+                    >(8,5)<br />
+                    <a href="https://www.rottentomatoes.com/m/modern_times"
+                      >rotten tomatoes </a
+                    >(9,8)
+                  </p>
+                  <p>6 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-6"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">Viaje A La Luna (1902)</div>
+                <div class="cardContent">
+                  <p>Aventura, Ciencia ficción</p>
+                  <p>
+                    Dirección: <br />
+                    Georges Mélies
+                  </p>
+                  <p>Reparto principal: <br />Georges Mélies, Victor André</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0000417/">imdb </a
+                    >(8,2)<br />
+                    <a
+                      href="https://www.rottentomatoes.com/m/le_voyage_dans_la_lune"
+                      >rotten tomatoes </a
+                    >(10)
+                  </p>
+                  <p>8 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-7"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">Metropolis (1927)</div>
+                <div class="cardContent">
+                  <p>Drama, Ciencia ficción</p>
+                  <p>
+                    Dirección: <br />
+                    Fritz Lang
+                  </p>
+                  <p>Reparto principal: <br />Brigitte Helm, Alfred Abel</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0017136/">imdb </a
+                    >(8,3)<br />
+                    <a
+                      href="https://www.rottentomatoes.com/m/1013775-metropolis"
+                      >rotten tomatoes </a
+                    >(9,7)
+                  </p>
+                  <p>10 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poster">
+            <div class="flip-card">
+              <div class="flip-card-front" id="poster-8"></div>
+              <div class="flip-card-back">
+                <div class="cardTitle">The Bride of Frankenstein (1937)</div>
+                <div class="cardContent">
+                  <p>Drama, Terror, Ciencia ficción</p>
+                  <p>
+                    Dirección: <br />
+                    James Whale
+                  </p>
+                  <p>Reparto principal: <br />Boris Karloff, Elsa Lanchester</p>
+                  <p>
+                    <a href="https://www.imdb.com/title/tt0026138/">imdb </a
+                    >(7,8)<br />
+                    <a
+                      href="https://www.rottentomatoes.com/m/bride_of_frankenstein"
+                      >rotten tomatoes </a
+                    >(9,8)
+                  </p>
+                  <p>12 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footerCampos">
+          <div class="autor">@ Ljupka Ivanova 2022</div>
+          <div class="redes">
+            <i class="fb"
+              ><img src="img/facebook.png" width="50px" height="50px" alt=""
+            /></i>
+            <i class="twitter"
+              ><img src="img/twitter.png" width="50px" height="50px" alt=""
+            /></i>
+            <i class="insta"
+              ><img src="img/insta.png" width="50px" height="50px" alt=""
+            /></i>
+          </div>
+          <a href="aviso.html">Aviso Legal</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

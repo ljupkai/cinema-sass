@@ -1,0 +1,161 @@
+@import "menu";
+
+.container {
+  background-image: url(/img/film1.png);
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  animation: filmroll 5s linear infinite;
+  margin: 20px 30px;
+  @include colors(rgb(34, 33, 48), #dad3d3);
+  font-family: "Lato";
+
+  .datos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px;
+    background: url(/img/decor/greta.png) no-repeat right bottom;
+    @include respond-to(712px) {
+      background: none;
+    }
+
+    .cine-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      flex: 1;
+
+      .eleccionPeli {
+        padding: 60px 50px;
+        label {
+          margin-right: 15px;
+        }
+        select {
+          @extend %input;
+          margin-top: 10px;
+        }
+      }
+      .cinema {
+        perspective: 900px;
+        padding-bottom: 60px;
+
+        .fila {
+          display: flex;
+        }
+      }
+    }
+    .formulario {
+      flex: 1;
+      margin: 0 60px 0 0px;
+      max-width: 600px;
+      min-width: 500px;
+      padding: 55px 0 0 7px;
+      input {
+        max-width: 250px;
+        @extend %input;
+        margin-bottom: 10px;
+        margin-top: 8px;
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+      }
+      label {
+        display: inline-block;
+        width: 23%;
+        background-color: #222;
+        padding: 3px;
+      }
+      .radio label:not(:first-child) {
+        width: 60px;
+      }
+      .formRow:nth-last-child(-n + 4) input {
+        width: 30px;
+      }
+      button {
+        padding: 5px;
+        margin: 20px 50px 0 0;
+        width: 80px;
+        &:hover {
+          background-color: lightgrey;
+          cursor: pointer;
+        }
+        &:active {
+          background-color: grey;
+        }
+      }
+    }
+  }
+}
+
+.asiento {
+  background-color: #444;
+  height: 15px;
+  width: 17px;
+  margin: 4px;
+  border-radius: 6px 6px 0 0;
+  &.ocupado {
+    background-color: #d5cdcd;
+  }
+  &:not(.ocupado) {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.4);
+    }
+  }
+  &.seleccionado {
+    background-color: aqua;
+  }
+}
+.muestra {
+  @include colors(rgb(34, 31, 36), rgb(165, 165, 165));
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  li {
+    display: flex;
+    margin: 0 10px;
+    .etiqueta {
+      margin-left: 3px;
+    }
+  }
+  .asiento {
+    &:not(.ocupado) {
+      &:hover {
+        cursor: default;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.pantalla {
+  background-color: #fff;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 15px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255, 255, 255, 0.7);
+}
+
+.fila {
+  &:nth-of-type(4),
+  &:nth-of-type(9) {
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes filmroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+
+@import "footer";

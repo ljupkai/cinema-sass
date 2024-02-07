@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/entradas.css" />
+    <title>RetroCine</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="portada.html">
+          <div id="rotatingFilm">
+            <img
+              src="img/roll1.png"
+              height="30"
+              width="30"
+              id="rotatingRoll1"
+              alt=""
+            />
+            <img
+              src="img/roll1.png"
+              height="20"
+              width="20"
+              id="rotatingRoll2"
+              alt=""
+            />
+          </div>
+          <img
+            src="img/camera1.png"
+            id="cameraStatic"
+            width="60"
+            height="22"
+            alt=""
+          />
+          <div id="logoname">RetroCine</div></a
+        >
+      </div>
+      <!-- Hamburger icon -->
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <div class="menu">
+        <div id="dropdown" class="menuItem">
+          Películas
+          <div class="submenu">
+            <a href="peliculas.html">Esta semana</a>
+            <a href="#">Proximaménte</a>
+          </div>
+        </div>
+        <a href="blog.html" class="menuItem">Blog</a>
+        <a href="entradas.html" class="menuItem">Entradas</a>
+        <a href="contact.html" class="menuItem">Contacto</a>
+      </div>
+      <div id="searchBar">
+        <input type="text" placeholder="Buscar.." />
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="datos-container">
+          <div class="cine-container">
+            <div class="eleccionPeli">
+              <label>Elige una película:</label>
+              <select id="pelicula">
+                <option value="1">Forbidden Planet - 10AM</option>
+                <option value="2">Gilda - 12PM</option>
+                <option value="3">The Shining - 2PM</option>
+                <option value="4">Brain Eaters - 4PM</option>
+                <option value="5">Modern Times - 6PM</option>
+                <option value="6">Viaje a la Luna - 8PM</option>
+                <option value="7">Metropolis - 10PM</option>
+                <option value="8">The Bride of Frankestein - 12PM</option>
+              </select>
+            </div>
+            <ul class="muestra">
+              <li>
+                <div class="asiento"></div>
+                <div class="etiqueta">libre</div>
+              </li>
+              <li>
+                <div class="asiento seleccionado"></div>
+                <div class="etiqueta">seleccionado</div>
+              </li>
+              <li>
+                <div class="asiento ocupado"></div>
+                <div class="etiqueta">ocupado</div>
+              </li>
+            </ul>
+            <div class="cinema">
+              <div class="pantalla"></div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento seleccionado"></div>
+                <div class="asiento seleccionado"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+              <div class="fila">
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento ocupado"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+                <div class="asiento"></div>
+              </div>
+            </div>
+          </div>
+          <form action="#" class="formulario">
+            <div class="formRow">
+              <label for="fecha">Fecha:</label>
+              <input type="date" name="fecha" id="fecha" />
+            </div>
+            <div class="formRow">
+              <label for="nombre">Nombre y apellidos:</label>
+              <input type="text" name="nombre" id="nombre" />
+            </div>
+            <div class="formRow radio">
+              <label> Método de pago:</label>
+              <input type="radio" name="pago" value="tarjeta" id="tarjeta" />
+              <label for="tarjeta">Tarjeta</label>
+              <input type="radio" name="pago" id="paypal" value="paypal" />
+              <label for="paypal">PayPall</label>
+            </div>
+
+            <div class="formRow">
+              <label for="numTarjeta">Número de tarjeta:</label>
+              <input type="text" name="numTarjeta" id="numTarjeta" />
+            </div>
+            <div class="formRow">
+              <label for="cantidad">Cantidad:</label>
+              <input
+                type="text"
+                name="cantidad"
+                id="cantidad"
+                value="2"
+                readonly
+              />
+            </div>
+            <div class="formRow">
+              <label for="sum">Total:</label>
+              <input type="text" name="sum" id="sum" value="14€" readonly />
+            </div>
+            <button type="submit">Comprar</button>
+            <button type="submit">Cancelar</button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="footerCampos">
+          <div class="autor">@ Ljupka Ivanova 2022</div>
+          <div class="redes">
+            <i class="fb"
+              ><img src="img/facebook.png" width="50px" height="50px" alt=""
+            /></i>
+            <i class="twitter"
+              ><img src="img/twitter.png" width="50px" height="50px" alt=""
+            /></i>
+            <i class="insta"
+              ><img src="img/insta.png" width="50px" height="50px" alt=""
+            /></i>
+          </div>
+          <a href="aviso.html">Aviso Legal</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

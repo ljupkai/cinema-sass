@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "elements";
+  src: url("/font/VintageDecorativeSigns.ttf");
+}
+
+@import "menu";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.6fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  padding: 20px 30px;
+  @include respond-to(800px) {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro {
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+    font-family: "Satisfy";
+    font-size: x-large;
+    padding: 35px;
+    @include colors($introBackground, $artBackgroundLight);
+
+    .titulo a {
+      color: #fff;
+      font-size: 50px;
+      padding-bottom: 10px;
+      text-decoration: none;
+    }
+    :last-child {
+      font-size: medium;
+    }
+    .subtitulo {
+      font-family: "Old Standard TT";
+      padding-bottom: 20px;
+      font-size: 20px;
+      color: #fff;
+      font-variant: small-caps;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: (transform 0.4s, opacity 0.5s);
+    }
+  }
+}
+
+.intro {
+  .titulo {
+    &:hover + .subtitulo {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+%red-icon {
+  background-color: $iconBackground;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+%articulo {
+  @include colors($articlesBackground, $textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px 40px 20px;
+  font-family: "Old Standard TT";
+
+  i {
+    @extend %red-icon;
+    margin: 20px 30px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+    }
+  }
+  .artTitulo {
+    font-family: "parklane";
+    font-size: 30px;
+    // padding-bottom: 10px;
+  }
+  h3 {
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .decor {
+    background-image: url(/img/decor/linea2.png);
+    height: 20px;
+    width: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .destContent {
+    text-align: justify;
+    padding: 10px 20px;
+    a {
+      color: $textColor;
+    }
+  }
+}
+
+.destacadoArticulo {
+  grid-area: 2 / 1 / 3 / 2;
+  @extend %articulo;
+  padding-left: 50px;
+}
+
+.blogArticulo {
+  grid-area: 2 / 2 / 3 / 3;
+  @extend %articulo;
+}
+
+.proximamenteArticulo {
+  grid-area: 2 / 3 / 3 / 4;
+  @extend %articulo;
+  padding-right: 50px;
+}
+
+@import "footer";

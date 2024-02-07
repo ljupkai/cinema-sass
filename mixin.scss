@@ -1,0 +1,36 @@
+@mixin animation($name, $duration, $timing: linear infinite) {
+  -webkit-animation: $name $duration $timing;
+  -moz-animation: $name $duration $timing;
+  animation: $name $duration $timing;
+}
+
+@mixin transition($property, $delay, $timing: linear) {
+  -webkit-transition: $property $timing $delay;
+  -moz-transition: $property $timing $delay;
+  transition: $property $timing $delay;
+}
+
+@mixin colors($colorBackground, $colorText: #222) {
+  color: $colorText;
+  background-color: $colorBackground;
+}
+
+@mixin respond-to($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin box-sizing($x: border-box) {
+  -webkit-box-sizing: $x;
+  -moz-box-sizing: $x;
+  box-sizing: $x;
+}
+
+%input {
+  background-color: #eeeeee;
+  font-size: 14px;
+  border: 5px solid #222;
+  border-radius: 5px;
+  padding: 5px 15px;
+}

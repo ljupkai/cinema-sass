@@ -1,0 +1,119 @@
+#target-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &:target {
+    pointer-events: all;
+    opacity: 1;
+  }
+  #target-inner {
+    position: absolute;
+    padding: 30px;
+    font-size: 20px;
+    width: 50%;
+    top: 27%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    @include colors(rgb(242, 190, 150), #333);
+    margin-top: 0;
+    @include respond-to(820px) {
+      top: 35%;
+    }
+    h2 {
+      padding-bottom: 20px;
+    }
+    .modalContent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .modalText {
+        width: 40%;
+        word-spacing: 1px;
+        text-align: left;
+        flex: 1;
+        padding-bottom: 20px;
+      }
+      .modalForm {
+        font-size: 14px;
+        flex: 1;
+        &:last-child {
+          text-align: end;
+        }
+        label {
+          width: 45%;
+        }
+        input,
+        textarea {
+          @extend %input;
+          border: none;
+          margin-left: 5px;
+          width: 100%;
+        }
+        textarea {
+          height: 100px;
+        }
+      }
+
+      .modalForm .fila {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  a.close {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3e5b7a;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
+button.enviarBtn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 45px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    background-color: #fff;
+  }
+  &:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+}
+
+.modalContent {
+  @include respond-to(820px) {
+    justify-content: center;
+    .modaltext {
+      width: 100%;
+    }
+  }
+}

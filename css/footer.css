@@ -1,0 +1,23 @@
+footer {
+  color: #222;
+  background-color: #f08058;
+}
+footer .footerCampos {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  align-items: center;
+  font-family: "Old Standard TT";
+}
+footer .footerCampos .autor {
+  padding-left: 20px;
+}
+footer .footerCampos .redes > i {
+  padding-right: 40px;
+  cursor: pointer;
+}
+footer .footerCampos a {
+  padding-right: 20px;
+  text-decoration: none;
+  color: #222;
+}
